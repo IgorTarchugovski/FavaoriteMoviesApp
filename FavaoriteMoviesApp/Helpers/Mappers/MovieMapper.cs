@@ -20,5 +20,17 @@ namespace FavaoriteMoviesApp.Helpers.Mappers
                 Genre = entity.Genre
             };
         }
+
+        public static MovieDto MovieToMovieDto(Movie entity)
+        {
+            return new MovieDto()
+            {
+                Id = entity.Id,
+                Title = entity.Title,
+                Description = entity.Description,
+                Year = entity.Year,
+                Genre = entity.Genre
+            };
+        }
     }
 }

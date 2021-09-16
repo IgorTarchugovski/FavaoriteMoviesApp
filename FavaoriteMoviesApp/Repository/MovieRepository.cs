@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FavaoriteMoviesApp.Repository
 {
-    interface MovieRepository : IReposiroty<Movie>
+    interface MovieRepository : IRepository<Movie>
     {
         public void Add(Movie entity)
         {
@@ -17,10 +17,10 @@ namespace FavaoriteMoviesApp.Repository
         public void Delete(int id)
         {
             Movie movie = GetById(id);
-            if (movie == null)
+            /*if (movie == null)
             {
                 throw new Exception($"Not such movie with ID: {id}");
-            }
+            }*/
             StaticDb.Movies.Remove(movie);
         }
 
@@ -37,10 +37,10 @@ namespace FavaoriteMoviesApp.Repository
         public void Update(Movie entity)
         {
             Movie movie = GetById(entity.Id);
-            if (movie == null)
+            /*if (movie == null)
             {
                 throw new Exception($"Not such movie with ID: {entity.Id}");
-            }
+            }*/
             int idxOfMovie = StaticDb.Movies.IndexOf(movie);
             StaticDb.Movies[idxOfMovie] = entity;
         }

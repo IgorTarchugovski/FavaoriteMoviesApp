@@ -1,5 +1,6 @@
 ﻿using FavaoriteMoviesApp.Models;
 using FavaoriteMoviesApp.Models.DtoModels;
+using FavaoriteMoviesApp.Models.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace FavaoriteMoviesApp.Services
     {
         List<MovieDto> GetAllMovies();
         MovieDto GetById(int id);
-        List<MovieDto> GetByGenre();
+        List<MovieDto> GetByGenre(Genre genre);
         void Add(MovieDto entity);
         void Delete(int id);
         void Update(MovieDto entity);
