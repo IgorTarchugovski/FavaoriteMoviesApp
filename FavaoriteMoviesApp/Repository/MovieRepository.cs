@@ -10,8 +10,9 @@ namespace FavaoriteMoviesApp.Repository
     {
         public void Add(Movie entity)
         {
-            entity.Id = StaticDb.Movies.Count + 1;
+            entity.Id = StaticDb.id + 1;
             StaticDb.Movies.Add(entity);
+            StaticDb.id++;
         }
 
         public void Delete(int id)

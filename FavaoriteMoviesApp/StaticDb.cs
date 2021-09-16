@@ -9,6 +9,8 @@ namespace FavaoriteMoviesApp
 {
     public static class StaticDb
     {
+        public static int id = 10;
+
         public static List<Movie> Movies = new List<Movie>()
         {
             new Movie()
